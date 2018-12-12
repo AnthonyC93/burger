@@ -1,0 +1,16 @@
+body{
+    /* background-image: url("./../img/hamburger.jpg"); */
+    background-size: cover;
+}
+
+#add{
+    width:100%;
+}
+
+.m6{
+    background-color: white;
+}
+.col{
+    background-color: white;
+}
+
