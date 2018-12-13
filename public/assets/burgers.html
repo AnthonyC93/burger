@@ -9,32 +9,73 @@
   <!-- <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script> -->
   <link type="text/css" rel="stylesheet" href="./css/burger_style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        var options={};
+        var elems = document.querySelectorAll('.parallax');
+        var instances = M.Parallax.init(elems, options);
+     });
+ </script>
 </head>
 
 <body>
-    <div class='container'>
-        <div class='section'>
+    <div class="parallax-container">
+            <div class="parallax"><img src="./img/hamburger.jpg">
+                <!-- <div class='container'>
+                    <div class='card white'>
+                        <div class='card-content'>
+                            <div class='row'>
+                                    <div class='col s12 center-align'>
+                                        <h1>EAT DA BURGER</h1>
+                                        <div class="input-field col s12">
+                                            <input id="boiga" type="text" name='burgerToAdd' class="validate">
+                                            <label for="boiga">Enter the burger you want to eat</label>
+                                        </div>
+                                        <a id='add'class='btn-large waves-effect'>ADD BURGER</a>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+    </div>
+    <div class='section'>
+     <div class='container'>
             <div class='row'>
                 <div class='col s12 center-align'>
-                    <h1>EAT DA BOIGA</h1>
-                    <div class="input-field col s12">
-                        <input id="boiga" type="text" class="validate">
-                        <label for="boiga">Enta the boiga you want</label>
-                    </div>
-                    <a id='add'class='btn-large waves-effect'>ADD BOIGA</a>
+                    <h1>EAT DA BURGER</h1>
+                    <form action="/" method="POST">
+                        <div class="input-field col s12">
+                            <input id="burger" type="text" name='burgerToAdd'>
+                            <label for="burger">Enter the burger you want to eat</label>
+                        </div>
+                        <a id='add'class='btn-large waves-effect'>ADD BURGER</a>
+                    </form>
                 </div>
             </div>
-            <div class='section'></div>
-                <div class='row'>
-                    <div class='col s12 m6'></div>
-                    <div class='col s12 m6'></div>
+            <div class='row'>
+                <div class='col s12 m6'>
+                        <ul class='burgersToEat collection'>
+                            <li class="collection-header center-align"><h3>Available Burgers to Eat</h3></li>
+                            <li class='collection-item'><div>Test Burger<a href='#!' class='secondary-content'><i class='material-icons'>restaurant</i></a></div></li>
+                            <li class='collection-item'><div>Test Burger<a href='#!' class='secondary-content'><i class='material-icons'>restaurant</i></a></div></li>
+                            <li class='collection-item'><div>Test Burger<a href='#!' class='secondary-content'><i class='material-icons'>restaurant</i></a></div></li>
+                        </ul>
+                    </div>
+                    <div class='col s12 m6'>
+                            <ul class='burgersToEat collection center-align'>
+                                <li class="collection-header center-align"><h3>Eaten Burgers</h3></li>
+                                <li class='collection-item'>Test Burger</li>
+                                <li class='collection-item'>Test Burger</li>
+                                <li class='collection-item'>Test Burger</li>
+                        </ul>
                 </div>
             </div>
         </div>
     </div>
-
-
-
+    <div class="parallax-container">
+            <div class="parallax"><img src="./img/hamburger.jpg"></div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>

@@ -1,16 +1,29 @@
-body{
-    /* background-image: url("./../img/hamburger.jpg"); */
+/* body{
+    background-image: url("./../img/hamburger.jpg");
     background-size: cover;
-}
+} */
 
 #add{
     width:100%;
 }
 
-.m6{
+/* .m6{
     background-color: white;
 }
 .col{
     background-color: white;
+} */
+.parallax-container {
+    height: 5em;
 }
 
+.btn-large{
+    color:#5E3613;
+    background-color:#D7FD6E;
+}
+.material-icons{
+    color:#5E3613;
+}
+/* input[type=text]:not(.browser-default):focus:not([readonly])+label{
+    color:black;
+} */
