@@ -3,9 +3,9 @@
 <div class='col s12 m6'>
     <ul class='burgersToEat collection'>
         <li class="collection-header center-align"><h3>Available Burgers to Eat</h3></li>
-        <li class='collection-item'><div>Test Burger<a href='#!' class='secondary-content'><i class='material-icons'>restaurant</i></a></div></li>
-        <li class='collection-item'><div>Test Burger<a href='#!' class='secondary-content'><i class='material-icons'>restaurant</i></a></div></li>
-        <li class='collection-item'><div>Test Burger<a href='#!' class='secondary-content'><i class='material-icons'>restaurant</i></a></div></li>
+        {{#each arbitraryName}}
+            <li class='collection-item'><div>{{this.burger_name}}<a href='#!' class='secondary-content'><i class='material-icons'>restaurant</i></a></div></li>
+        {{/each}}
     </ul>
 </div>
 <div class='col s12 m6'>

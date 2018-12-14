@@ -2,24 +2,28 @@ var express = require('express');
 var app = express();
 var exphbs = require("express-handlebars");
 var PORT = process.env.PORT || 4000;
-
+var orm =require('./config/orm');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("./public/assets"));
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-
 app.get('/',function(req,res){
-    //to show the homepage, we're gonna need to make a call to the mysql database to get the status of all the current burgers
+    // to show the homepage, we're gonna need to make a call to the mysql database to get the status of all the current burgers
 
     // connection.query('SELECT * FROM burgers',function(err,data){
     //     if(err)throw err;
     //     console.log(data);
     //     res.render('index',{arbitraryName: data})
     // })
-
+    // let allBurgers = orm.selectAll();
+    console.log({arbitraryName:orm.selectAll()})
+    res.render('index',{arbitraryName:orm.allBurgers});
+    
+    // orm.insertOne('sexyTest');
 })
 
 app.post('/',function(req,res){
