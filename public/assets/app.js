@@ -5,19 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 $(".secondary-content").on('click',function(){
-    console.log(this.id);
-
-    let objectToSend={
-        id:this.id
-    }
-    console.log(objectToSend)
-
-    $.ajax('/'+objectToSend.id, {
+  
+    $.ajax('/'+this.id, {
         type: "PUT"
-        // data:objectToSend
     }).then(function(){
         console.log('burger eaten!');
-        location.reload();
+        //line below not working for some reason
+        // location.reload();
     })
 })
 
